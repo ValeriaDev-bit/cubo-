@@ -1,0 +1,44 @@
+<style type="text/css">
+table {
+margin: auto;
+}
+
+td {
+width: 100px;
+height: 100px;
+border: 2px black solid;
+text-align: center;
+}
+
+
+#centro{
+color: red;
+font-size: 20px;
+}
+
+
+
+
+
+
+var d=document.getElementById('centro');
+d.addEventListener('click', function(e){
+e.target.innerHTML='<h1>centro!<h1>';
+d.style.color='red';
+d.style.fontSize='20px';
+});
+
+
+var centro= document.querySelector('#centro');
+var textCentro='<h1>centro!<h1>';
+centro.insertAdjacentHTML('afterbegin',textCentro);
+
+
+var h1p=document.createElement("h1");
+var testo=document.createTextNode("centro!!"); 
+h1p.appendChild(testo);
+h1p.insertAdjacentHTML('afterbegin',testo);
+var d=document.getElementById('centro'); 
+d.addEventListener('click', function(e){ 
+console.log(e.h1p); 
+})

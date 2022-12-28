@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Titolo della pagina </title>
+<meta name="keywords" content="tabella, esercizio finale">
+<meta name="description" content="esercizio finale">
+<link rel="stylesheet" type="text/css" href="stile.css">
+<meta charest="utf-8">
+</head>
+
+<body>
+<table margin:auto>
+<tr>
+<td></td><td> </td><td> </td>
+</tr>
+
+<tr>
+<td > </td><td id="centro"> </td><td> </td>
+</tr>
+
+<tr>
+<td> </td><td> </td><td> </td>
+</tr>
+
+</table>
+
+
+
+</body>
+
+<script>
+
+var arrayTd=[];
+arrayTd=document.getElementsByTagName('td');
+for(let i=0; i<arrayTd.length;i++){
+arrayTd[i].addEventListener('click',function(){
+arrayTd[i].style.backgroundColor='green';
+})
+}
+
+
+
+var d=document.getElementById('centro');
+d.addEventListener('click', function(e){
+e.target.innerHTML='<h1>centro!<h1>';
+d.style.color='red';
+d.style.fontSize='20px';
+});
+
+
+</script>
+</html>
+
